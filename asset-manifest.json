@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dellman000/CISC275-testing/static/css/main.8d4de5bb.chunk.css",
-    "main.js": "/dellman000/CISC275-testing/static/js/main.63de250c.chunk.js",
-    "main.js.map": "/dellman000/CISC275-testing/static/js/main.63de250c.chunk.js.map",
-    "runtime-main.js": "/dellman000/CISC275-testing/static/js/runtime-main.213a2ad0.js",
-    "runtime-main.js.map": "/dellman000/CISC275-testing/static/js/runtime-main.213a2ad0.js.map",
-    "static/js/2.b381d4c3.chunk.js": "/dellman000/CISC275-testing/static/js/2.b381d4c3.chunk.js",
-    "static/js/2.b381d4c3.chunk.js.map": "/dellman000/CISC275-testing/static/js/2.b381d4c3.chunk.js.map",
-    "static/js/3.16e81bdf.chunk.js": "/dellman000/CISC275-testing/static/js/3.16e81bdf.chunk.js",
-    "static/js/3.16e81bdf.chunk.js.map": "/dellman000/CISC275-testing/static/js/3.16e81bdf.chunk.js.map",
-    "index.html": "/dellman000/CISC275-testing/index.html",
-    "static/css/main.8d4de5bb.chunk.css.map": "/dellman000/CISC275-testing/static/css/main.8d4de5bb.chunk.css.map",
-    "static/js/2.b381d4c3.chunk.js.LICENSE.txt": "/dellman000/CISC275-testing/static/js/2.b381d4c3.chunk.js.LICENSE.txt"
+    "main.css": "/CISC275-testing/static/css/main.8d4de5bb.chunk.css",
+    "main.js": "/CISC275-testing/static/js/main.63de250c.chunk.js",
+    "main.js.map": "/CISC275-testing/static/js/main.63de250c.chunk.js.map",
+    "runtime-main.js": "/CISC275-testing/static/js/runtime-main.59a59e01.js",
+    "runtime-main.js.map": "/CISC275-testing/static/js/runtime-main.59a59e01.js.map",
+    "static/js/2.b381d4c3.chunk.js": "/CISC275-testing/static/js/2.b381d4c3.chunk.js",
+    "static/js/2.b381d4c3.chunk.js.map": "/CISC275-testing/static/js/2.b381d4c3.chunk.js.map",
+    "static/js/3.16e81bdf.chunk.js": "/CISC275-testing/static/js/3.16e81bdf.chunk.js",
+    "static/js/3.16e81bdf.chunk.js.map": "/CISC275-testing/static/js/3.16e81bdf.chunk.js.map",
+    "index.html": "/CISC275-testing/index.html",
+    "static/css/main.8d4de5bb.chunk.css.map": "/CISC275-testing/static/css/main.8d4de5bb.chunk.css.map",
+    "static/js/2.b381d4c3.chunk.js.LICENSE.txt": "/CISC275-testing/static/js/2.b381d4c3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.213a2ad0.js",
+    "static/js/runtime-main.59a59e01.js",
     "static/js/2.b381d4c3.chunk.js",
     "static/css/main.8d4de5bb.chunk.css",
     "static/js/main.63de250c.chunk.js"
