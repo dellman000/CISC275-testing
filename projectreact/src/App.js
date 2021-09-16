@@ -7,15 +7,25 @@ import Tweet from './Tweet.js';
 function App(){
 const [isRed,setRed]=useState(false);
 const [count,setCount]=useState(0);
+
 const Increment=()=>  {
   setCount(count+1);
 }
+
 return(
-  <div className ="App">
+  
+  
+    <div className ="App">
    
-    <button onClick={Increment}>Increment</button>
-    <h1>{count}</h1>
-  </div>
+   <button onClick={Increment}>Increment</button>
+   <h1>{count}</h1>
+  
+ </div> 
+  
+    
+ 
+  
+  
   )
 
 }

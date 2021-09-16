@@ -18,3 +18,36 @@ justify-content: space-around;
 align-items: center;
 
 }
+
+.square {
+  height: 100px;
+  width: 100px;
+  display: grid;
+  
+/*grid-template-columns:repeat(2,1fr);*/
+
+  /*margin-top: 5% ;
+  margin-left: 45%;*/  
+  background-color: #665;
+ /* animation: rotation 5s infinite linear;*/
+  
+}
+
+.tile{
+  margin-top: 5% ;
+  margin-left: 40%;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap:10px;
+  
+}
+
+@keyframes rotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+  
+}
