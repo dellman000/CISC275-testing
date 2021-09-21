@@ -1,10 +1,11 @@
 import React,{useState} from 'react'; 
-import Hello from'./Sayhello.js';
-import Tweet from './Tweet.js';
+//import Hello from'./Sayhello.js';
+//import Tweet from './Tweet.js';
+import './App.css';
 //import './App.css'
 
 
-function App(){
+function App(){/*
 const [isRed,setRed]=useState(false);
 const [count,setCount]=useState(0);
 
@@ -26,7 +27,7 @@ return(
  
   
   
-  )
+  )*/
 
 }
 

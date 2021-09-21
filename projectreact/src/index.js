@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import './App.css';
 import Box from './box';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <React.StrictMode>
     
     <Box />
