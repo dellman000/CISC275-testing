@@ -1,4 +1,4 @@
-import RightHorizontal_mid from "./RightHorizontal_mid";
+
 
 const RightHorizontal_bot=(map,id,turn)=>{
     let seventh = map.get(7)[0];

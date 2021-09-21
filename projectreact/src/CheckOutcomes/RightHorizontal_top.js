@@ -1,4 +1,3 @@
-import React from "react";
 
 const RightHorizontal_top= (map,id,turn)=>{
     let first = map.get(1)[0];

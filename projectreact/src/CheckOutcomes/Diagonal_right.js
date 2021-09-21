@@ -1,16 +1,15 @@
-
-
-const Vertical_right=(map,id,turn)=>{
+const Diagonal_right=(map,id,turn)=>{
     let third = map.get(3)[0];
-    let sixth = map.get(6)[0];
-    let nineth = map.get(9)[0];     
-        if(third==turn && sixth==turn && nineth==turn){
+    let fifth = map.get(5)[0];
+    let seventh = map.get(7)[0];     
+        if(third==turn && fifth==turn && seventh==turn){
             //console.log("first: "+first +" second: "+ second +",third: "+third);
             return turn;
         }
         else{
             return "gray";
         } 
+
 }
 
-export default Vertical_right;
+export default Diagonal_right;
