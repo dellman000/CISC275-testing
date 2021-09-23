@@ -5,6 +5,16 @@
   justify-content: space-around;
   align-items: center;
 }
+.PlayGameBlue{
+color: blue;
+font-size: 30px;
+font-weight: 900;
+} 
+.PlayGameRed{
+  color: red;
+  font-size: 30px;
+  font-weight: 900;
+  } 
 
 .Tweet{
 border: 2px solid black;
@@ -23,18 +33,25 @@ margin-left: 90%;
 .square {
   height: 100px;
   width: 100px;
-  display: grid;
-
-  
-  
+  display: grid; 
 /*grid-template-columns:repeat(2,1fr);*/
-
   /*margin-top: 5% ;
   margin-left: 45%;*/  
-  /*background-color: #665;
- /* animation: rotation 5s infinite linear;*/
+  /*background-color: #665;*/
+  /*animation: rotation 5s  linear;*/
  background-color: yellow;
   
+}
+
+.animatedSquare{
+  height: 100px;
+  width: 100px;
+  display: grid; 
+/*grid-template-columns:repeat(2,1fr);*/
+  /*margin-top: 5% ;
+  margin-left: 45%;*/  
+  animation: rotation 5s  linear;
+ background-color: yellow;
 }
 
 .tile{

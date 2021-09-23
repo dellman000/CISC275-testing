@@ -9,6 +9,15 @@ import PlayAgain from "./PlayAgain.js";
     console.log("hello");
 }*/
 
+const WinColor=(turn)=>{
+    if (turn=="Red"){
+        return "PlayGameRed";
+    }
+    if(turn=="Blue"){
+        return"PlayGameBlue";
+    }
+}
+
 const ClearMap=(map)=>{
     let x = 1;
     let y = 3;
@@ -52,38 +61,38 @@ const RepeatBox = () => {
         }
     }
     const [colorStates, setColorStates] = useState(map);
-    const [turn, setTurn] = useState('red');
+    const [turn, setTurn] = useState('Red');
     const [victor,setVictor] = useState('gray');
     
     //let color = 'gray'
     // let setcolor = () => color = 'red'
     const changecolor = (id) => {
         const newMap = new Map(colorStates);     
-        if (newMap.get(id)[0] == 'gray' && turn == 'red'&& victor =='gray') {
-            newMap.set(id, ['red', [x, y]]);
+        if (newMap.get(id)[0] == 'gray' && turn == 'Red'&& victor =='gray') {
+            newMap.set(id, ['Red', [x, y]]);
             setColorStates(newMap);
             let CheckWin= CheckVictor(newMap,id,turn);
             setVictor(CheckWin);
-            setTurn('blue');           
+            setTurn('Blue');           
         }
-        else if (newMap.get(id)[0] == 'gray' && turn == 'blue' && victor =='gray') {
-            newMap.set(id, ['blue',[x,y]]);
+        else if (newMap.get(id)[0] == 'gray' && turn == 'Blue' && victor =='gray') {
+            newMap.set(id, ['Blue',[x,y]]);
             setColorStates(newMap);
             let CheckWin= CheckVictor(newMap,id,turn);
             setVictor(CheckWin);
-            setTurn('red');            
+            setTurn('Red');            
         }
     }
 
 
     const list = [];
     for (let i = 1; i < 10; i++) {
-        let TileButton = <div onClick={() => changecolor(i)} style={{ backgroundColor: colorStates.get(i)[0] }} className="square" id={i}></div>
+        let TileButton = <div onClick={() => {changecolor(i);  }}  style={{ backgroundColor: colorStates.get(i)[0] }} className="square" id={i}></div>
         list[i] = TileButton;
     }
-    return <div className="tile"> {list} {victor !== 'gray'&& <div>{victor} wins</div> } <div className = "Tweet" onClick ={()=> {
+    return <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} wins</div> } <div className = "Tweet" onClick ={()=> {
         setColorStates(ClearMap(colorStates)); 
-        setTurn("red");
+        setTurn("Red");
         setVictor("gray");
     } 
     } ><PlayAgain /> 
@@ -94,7 +103,8 @@ function Box() {
     return <div className="tile">
         
         <RepeatBox />
-       
+        
+        
     </div>;
 }
 

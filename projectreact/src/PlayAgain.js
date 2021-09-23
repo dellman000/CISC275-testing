@@ -6,7 +6,7 @@ function PlayAgain(){
     };
 
     return(
-        <div><div > PlayAgain </div></div>
+        <div><h2 > PlayAgain </h2></div>
     );
 }
 
