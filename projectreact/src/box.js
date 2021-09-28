@@ -18,6 +18,17 @@ const WinColor=(turn)=>{
     }
 }
 
+const ShowPlayAgainButton=(turn)=>{
+if(turn!="gray"){
+    return "PlayAgain"
+}
+else{
+    return "PlayAgainNo";
+}
+
+
+}
+
 const ClearMap=(map)=>{
     let x = 1;
     let y = 3;
@@ -90,7 +101,7 @@ const RepeatBox = () => {
         let TileButton = <div onClick={() => {changecolor(i);  }}  style={{ backgroundColor: colorStates.get(i)[0] }} className="square" id={i}></div>
         list[i] = TileButton;
     }
-    return <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} wins</div> } <div className = "Tweet" onClick ={()=> {
+    return <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} wins</div> } <div className = {ShowPlayAgainButton(victor)} onClick ={()=> {
         setColorStates(ClearMap(colorStates)); 
         setTurn("Red");
         setVictor("gray");

@@ -16,7 +16,11 @@ font-weight: 900;
   font-weight: 900;
   } 
 
-.Tweet{
+ .PlayAgainNo{
+display: none;
+ } 
+.PlayAgain{
+
 border: 2px solid black;
 height: 150px;
 width: 150px;
@@ -27,6 +31,7 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 margin-left: 90%;
+
 
 }
 
@@ -55,11 +60,17 @@ margin-left: 90%;
 }
 
 .tile{
-  margin-top: 5% ;
-  margin-left: 40%;
+ /* margin-top: 5% ;
+  margin-left: 40%;*/
+
+  margin-top: auto ;
+  margin-left: auto;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 100px 100px 100px;
   grid-gap:10px;
+  
   
 }
 
