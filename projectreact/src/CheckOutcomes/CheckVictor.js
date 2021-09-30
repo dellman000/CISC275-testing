@@ -1,12 +1,19 @@
-import RightHorizontal_top from "./RightHorizontal_top.js";
-import RightHorizontal_mid from "./RightHorizontal_mid.js";
-import RightHorizontal_bot from "./RightHorizontal_bot.js";
-import Vertical_left from "./Vertical_left.js";
-import Vertical_mid from "./Vertical_mid.js";
-import Vertical_right from "./Vertical_right.js";
-import Diagonal_left from "./Diagonal_left.js";
-import Diagonal_right from "./Diagonal_right.js";
-
+//import RightHorizontal_top from "./RightHorizontal_top.js";
+//import RightHorizontal_mid from "./RightHorizontal_mid.js";
+//import RightHorizontal_bot from "./RightHorizontal_bot.js";
+//import Diagonal_left from "./Diagonal_left.js";
+//import Diagonal_right from "./Diagonal_right.js";
+//import Vertical_left from "./Vertical_left.js";
+//import Vertical_mid from "./Vertical_mid.js";
+//import Vertical_right from "./Vertical_right.js";
+import RightHorizontal_top from "./RightHorizontal_top.ts";
+import RightHorizontal_mid from "./RightHorizontal_mid.ts";
+import RightHorizontal_bot from "./RightHorizontal_bot.ts";
+import Vertical_left from "./Vertical_left.ts";
+import Vertical_mid from "./Vertical_mid.ts";
+import Vertical_right from "./Vertical_right.ts";
+import Diagonal_left from "./Diagonal_left.ts";
+import Diagonal_right from "./Diagonal_right.ts";
 
 
 const CheckVictor =(map,id,turn)=>{

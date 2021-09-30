@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Bannor from "./Bannor.js";
 import CheckVictor from "./CheckOutcomes/CheckVictor.js";
 import PlayAgain from "./PlayAgain.js";
 
@@ -10,10 +11,11 @@ import PlayAgain from "./PlayAgain.js";
 }*/
 
 const WinColor=(turn)=>{
-    if (turn=="Red"){
+    if (turn==="Red"){
+
         return "PlayGameRed";
     }
-    if(turn=="Blue"){
+    if(turn==="Blue"){
         return"PlayGameBlue";
     }
 }
@@ -53,7 +55,30 @@ const ClearMap=(map)=>{
 
 }
 
-const RepeatBox = () => {
+const SaveScoreRed=(RedScore,BlueScore,turn)=>{
+if(turn =="Red"){
+    return RedScore+1;
+}
+else{
+    return RedScore;
+}
+}
+const SaveScoreBlue=(RedScore,BlueScore,turn)=>{
+    if(turn =="Blue"){
+        return BlueScore+1;
+    }
+    else{
+        return BlueScore;
+    }
+    }
+    
+
+
+const RepeatBox = (props) => {
+    const notifyScoreUpdate = props.notifyScoreUpdate;
+    const [RedScore,SetRedScore]=useState(0);
+    const [BlueScore,SetBlueScore]=useState(0);
+
     let map = new Map();
     let x = 1;
     let y = 3;
@@ -101,21 +126,43 @@ const RepeatBox = () => {
         let TileButton = <div onClick={() => {changecolor(i);  }}  style={{ backgroundColor: colorStates.get(i)[0] }} className="square" id={i}></div>
         list[i] = TileButton;
     }
-    return <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} wins</div> } <div className = {ShowPlayAgainButton(victor)} onClick ={()=> {
+
+    let Game = [];
+
+    Game[0] = <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} Wins</div> } <div className = {ShowPlayAgainButton(victor)} onClick ={()=> {
         setColorStates(ClearMap(colorStates)); 
+        
+        SetBlueScore(SaveScoreBlue(RedScore,BlueScore,victor));
+        SetRedScore(SaveScoreRed(RedScore,BlueScore,victor));
+
         setTurn("Red");
         setVictor("gray");
+        props.notifyScoreUpdate(victor)
     } 
     } ><PlayAgain /> 
-    </div> </div>;
+    </div> 
+    </div>
+
+    return Game;
 }
 
 function Box() {
-    return <div className="tile">
-        
-        <RepeatBox />
-        
-        
+    const [red, setRed] = useState(0)
+    const [blue, setBlue] = useState(0)
+
+    function handleScoreChange(victor) {
+        if (victor === "Red") {
+            setRed(red+1)
+        } else if (victor === "Blue") {
+            setBlue(blue+1)
+        }
+    }
+
+//<RepeatBox/>
+
+    return <div  >
+        <Bannor RedScore={red} BlueScore={blue}/>
+        <RepeatBox notifyScoreUpdate={handleScoreChange}/>
     </div>;
 }
 

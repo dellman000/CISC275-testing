@@ -5,6 +5,17 @@
   justify-content: space-around;
   align-items: center;
 }
+.Head{
+  min-height: 10vh;
+  background: rgb(198, 211, 214);
+  display:flex ;
+  justify-content: space-around;
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
 .PlayGameBlue{
 color: blue;
 font-size: 30px;
