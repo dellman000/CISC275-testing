@@ -9,9 +9,14 @@ const Bannor=(props)=>{
     return <div className ="Head">   
     <h1> 
         Tic-Tac-Toe
-        Team red: {RedScore}
-        Team Blue: {BlueScore}
+        <h2 >
+       <dt className ="PlayGameRed">  Team Red: {RedScore}</dt>
+       <dt className="PlayGameBlue" >  Team Blue: {BlueScore}</dt>
+       
+    </h2>
+        
     </h1>
+   
     
      </div>
 }

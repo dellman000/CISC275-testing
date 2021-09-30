@@ -10,6 +10,8 @@ import PlayAgain from "./PlayAgain.js";
     console.log("hello");
 }*/
 
+
+
 const WinColor=(turn)=>{
     if (turn==="Red"){
 
@@ -21,6 +23,8 @@ const WinColor=(turn)=>{
 }
 
 const ShowPlayAgainButton=(turn)=>{
+   
+
 if(turn!="gray"){
     return "PlayAgain"
 }
@@ -98,6 +102,7 @@ const RepeatBox = (props) => {
     }
     const [colorStates, setColorStates] = useState(map);
     const [turn, setTurn] = useState('Red');
+    const [NumberofTurns,SetNumOfTurns]=useState(0);
     const [victor,setVictor] = useState('gray');
     
     //let color = 'gray'
@@ -109,15 +114,16 @@ const RepeatBox = (props) => {
             setColorStates(newMap);
             let CheckWin= CheckVictor(newMap,id,turn);
             setVictor(CheckWin);
-            setTurn('Blue');           
+            setTurn('Blue');   
         }
         else if (newMap.get(id)[0] == 'gray' && turn == 'Blue' && victor =='gray') {
             newMap.set(id, ['Blue',[x,y]]);
             setColorStates(newMap);
             let CheckWin= CheckVictor(newMap,id,turn);
             setVictor(CheckWin);
-            setTurn('Red');            
+            setTurn('Red');  
         }
+      
     }
 
 
@@ -131,10 +137,8 @@ const RepeatBox = (props) => {
 
     Game[0] = <div className="tile"> {list} {victor !== 'gray'&& <div className ={WinColor(victor)} >{victor} Wins</div> } <div className = {ShowPlayAgainButton(victor)} onClick ={()=> {
         setColorStates(ClearMap(colorStates)); 
-        
         SetBlueScore(SaveScoreBlue(RedScore,BlueScore,victor));
         SetRedScore(SaveScoreRed(RedScore,BlueScore,victor));
-
         setTurn("Red");
         setVictor("gray");
         props.notifyScoreUpdate(victor)
